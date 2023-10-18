@@ -16,5 +16,8 @@ public class CRCDemo {
         System.out.println("Transmission Message: "+sender.getTransmissionMessage(generator, message));
         inputScanner.close();
 
+        // Task to study CRC Error checking
+        CRCChecker checker = new CRCChecker(1520,"1000000000011011111011011111111");
+        checker.checkErrors(50, 33, 40);
     }
 }
